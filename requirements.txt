@@ -1,2 +1,9 @@
-pandas
-numpy
+langgraph
+langchain
+langchain-groq
+langchain-tavily
+langchain-community
+python-dotenv
+requests
+streamlit
+fastapi
