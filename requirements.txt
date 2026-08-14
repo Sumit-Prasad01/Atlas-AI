@@ -7,3 +7,5 @@ python-dotenv
 requests
 streamlit
 fastapi
+pydantic-settings
+uvicorn[standard]
