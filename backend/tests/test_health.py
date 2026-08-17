@@ -12,6 +12,7 @@ def test_health_check() -> None:
 
     assert response.status_code == 200
     assert response.json() == {"status": "ok"}
+    assert response.headers["X-Request-ID"]
 
 
 def test_root_endpoint() -> None:
@@ -19,3 +20,12 @@ def test_root_endpoint() -> None:
 
     assert response.status_code == 200
     assert response.json()["status"] == "running"
+
+
+def test_request_id_is_preserved() -> None:
+    request_id = "test-request-id"
+
+    response = client.get("/api/v1/health", headers={"X-Request-ID": request_id})
+
+    assert response.status_code == 200
+    assert response.headers["X-Request-ID"] == request_id

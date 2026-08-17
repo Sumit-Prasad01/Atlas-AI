@@ -1,3 +1,16 @@
--r ../requirements.txt
-pydantic-settings>=2.0,<3.0
-uvicorn[standard]>=0.30,<1.0
+pydantic-settings
+uvicorn[standard]
+sqlalchemy[asyncio]
+asyncpg
+alembic
+langgraph
+langchain
+langchain-groq
+langchain-tavily
+langchain-community
+python-dotenv
+requests
+streamlit
+fastapi
+pydantic-settings
+uvicorn[standard]
