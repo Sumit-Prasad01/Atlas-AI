@@ -3,9 +3,11 @@ uvicorn[standard]
 sqlalchemy[asyncio]
 asyncpg
 alembic
+redis
 langgraph
 langchain
 langchain-groq
+langchain-huggingface
 langchain-tavily
 langchain-community
 python-dotenv

@@ -19,9 +19,16 @@ class Settings(BaseSettings):
     # These are optional until the database and service integrations are added.
     database_url: str | None = None
     redis_url: str | None = None
+    redis_connect_timeout_seconds: float = 1.0
+    redis_socket_timeout_seconds: float = 1.0
     qdrant_url: str | None = None
     minio_endpoint: str | None = None
-    ollama_url: str | None = None
+
+    # Cloud model providers. Set the key/token for the provider in use.
+    groq_api_key: str | None = None
+    groq_model: str = "llama-3.3-70b-versatile"
+    huggingfacehub_api_token: str | None = None
+    huggingface_model: str = "sentence-transformers/all-MiniLM-L6-v2"
 
     model_config = SettingsConfigDict(
         env_file=".env",
